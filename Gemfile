@@ -35,10 +35,18 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 2.13'
-  gem 'selenium-webdriver'
+  gem 'byebug'
+  # FactoryGirl
+  gem 'factory_girl_rails'
+  # Faker
+  gem 'faker'
+end
+
+group :test do
+  gem 'rspec-rails'
+  gem 'rspec-collection_matchers'
+  gem 'shoulda-matchers'
+  gem 'email_spec'
 end
 
 group :development do
