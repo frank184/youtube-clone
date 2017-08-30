@@ -8,4 +8,10 @@ RSpec.describe Video, type: :model do
       it { is_expected.to have_db_column(:file).of_type(:string) }
     end
   end
+
+  describe 'validation' do
+    it { is_expected.to validate_presence_of(:title) }
+    it { is_expected.to validate_presence_of(:description) }
+    it { is_expected.to validate_presence_of(:file) }
+  end
 end
