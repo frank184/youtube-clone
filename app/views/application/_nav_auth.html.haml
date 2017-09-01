@@ -1,22 +1,11 @@
 %ul.nav.navbar-nav.navbar-right
-  %li
-    %li.dropdown
-      %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-        Settings
-        %b.caret
-      %ul.dropdown-menu
-        %li
-          %a{:href => "#"} Edit Account
-        %li
-          %a{:href => "#"} Another action
-        %li
-          %a{:href => "#"} Something else here
-        %li.divider
-        %li
-          %a{:href => "#"} Separated link
-  %li
-    %a{:href => "#"} Sign Out
-  %li
-    %a{:href => "#"} Sign Up
-  %li
-    %a{:href => "#"} Sign In
+  - if user_signed_in?
+    %li
+      = link_to 'Settings', edit_user_registration_path
+    %li
+      = link_to 'Sign Out', destroy_user_session_path, method: :delete
+  - else
+    %li
+      = link_to 'Sign Up', new_user_registration_path
+    %li
+      = link_to 'Sign In', new_user_session_path
