@@ -20,10 +20,15 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+#flash {
+  border-radius: 0;
+}
+
 .navbar-youtube {
   background: red;
   border-color: red;
   border-radius: 0;
+  margin-bottom: 0;
   .navbar-brand {
     color: white;
   }
@@ -32,7 +37,6 @@
 .navbar-youtube .navbar-nav > li > a {
   color: white;
 }
-
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
   background: rgb(193, 0, 0);
 }
