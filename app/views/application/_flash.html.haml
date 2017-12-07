@@ -1,6 +1,6 @@
 - flash.each do |type, message|
   #flash{:class => "alert #{bootstrap_class_for(type)} fade in"}
     .pull-right
-      = link_to '<b>&times;</b>'.html_safe, 'javascript:;', onclick: '$("#flash").fadeOut(1000)', style: 'text-decoration: none;'
+      = link_to '<b>&times;</b>'.html_safe, 'javascript:;', onclick: '$("#flash").fadeOut(1000)', style: 'text-decoration: none;color:inherit;'
     .text-center
       = message

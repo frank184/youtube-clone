@@ -1,0 +1,6 @@
+- submit_text = @video.new_record? ? 'Create Video' : 'Update Video'
+= simple_form_for @video do |f|
+  = f.input :title
+  = f.input :description, as: :text
+  = f.input :attachment, as: :file
+  = f.submit submit_text, class: 'btn btn-lg btn-primary'
