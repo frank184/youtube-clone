@@ -50,7 +50,7 @@ class VideosController < Videos::ApplicationController
   private
 
     def create_video_params
-      params.require(:video).permit(:title, :description, :file)
+      params.require(:video).permit(:title, :description, :attachment)
     end
 
     def update_video_params

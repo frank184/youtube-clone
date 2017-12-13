@@ -1,8 +1,6 @@
 class AddAttachmentAttachmentToVideos < ActiveRecord::Migration[5.1]
   def self.up
-    change_table :videos do |t|
-      t.attachment :attachment
-    end
+    add_attachment :videos, :attachment
   end
 
   def self.down
